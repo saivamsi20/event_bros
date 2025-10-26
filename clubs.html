@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Connect - Our Clubs</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- General styles (navbar, footer, global buttons) -->
+    <link rel="stylesheet" href="clubs.css" />
+    <!-- Specific styles for the clubs page -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div class="logo">
+          <img src="logo.png" alt="Campus Connect Logo" />
+          <span>CAMPUS CONNECT</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="clubs.html" class="active">Clubs</a></li>
+            <!-- Active link -->
+            <li><a href="#">Events</a></li>
+            <li><a href="#" class="btn-login">Login</a></li>
+            <li><a href="#" class="btn-signup">Sign Up</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="clubs-page">
+      <div class="container">
+        <h1>Discover Campus Clubs</h1>
+        <p class="subtitle">
+          Explore a world of interests, passions, and communities.
+        </p>
+
+        <div class="search-filter-section">
+          <input
+            type="text"
+            id="clubSearch"
+            placeholder="Search for clubs..."
+            onkeyup="filterClubs()"
+          />
+          <select id="clubCategory" onchange="filterClubs()">
+            <option value="">All Categories</option>
+            <option value="Academic">Academic</option>
+            <option value="Social">Social</option>
+            <option value="Sports">Sports</option>
+            <option value="Arts">Arts & Culture</option>
+            <option value="Community">Community Service</option>
+            <!-- More categories can be added dynamically or hardcoded -->
+          </select>
+          <button class="btn btn-primary" onclick="filterClubs()">
+            Apply Filters
+          </button>
+        </div>
+
+        <div class="club-listings" id="clubListings">
+          <!-- Club cards will be dynamically loaded here by JavaScript -->
+          <div
+            class="club-card"
+            data-category="Academic"
+            data-name="Computer Science Club"
+          >
+            <img src="club-cs.jpg" alt="Computer Science Club" />
+            <div class="card-content">
+              <h3>Computer Science Club</h3>
+              <p class="category">Academic</p>
+              <p>
+                Dive into coding, algorithms, and tech projects. All skill
+                levels welcome!
+              </p>
+              <a href="#" class="btn btn-secondary">View Profile</a>
+            </div>
+          </div>
+
+          <div
+            class="club-card"
+            data-category="Social"
+            data-name="Campus Gamers Guild"
+          >
+            <img src="club-gaming.jpg" alt="Campus Gamers Guild" />
+            <div class="card-content">
+              <h3>Campus Gamers Guild</h3>
+              <p class="category">Social</p>
+              <p>
+                Weekly meetups for board games, video games, and competitive
+                esports.
+              </p>
+              <a href="#" class="btn btn-secondary">View Profile</a>
+            </div>
+          </div>
+
+          <div
+            class="club-card"
+            data-category="Sports"
+            data-name="Ultimate Frisbee Team"
+          >
+            <img src="club-frisbee.jpg" alt="Ultimate Frisbee Team" />
+            <div class="card-content">
+              <h3>Ultimate Frisbee Team</h3>
+              <p class="category">Sports</p>
+              <p>
+                Join our team for practices, tournaments, and fun on the field!
+              </p>
+              <a href="#" class="btn btn-secondary">View Profile</a>
+            </div>
+          </div>
+
+          <div
+            class="club-card"
+            data-category="Arts"
+            data-name="Campus Theatre Troupe"
+          >
+            <img src="club-theatre.jpg" alt="Campus Theatre Troupe" />
+            <div class="card-content">
+              <h3>Campus Theatre Troupe</h3>
+              <p class="category">Arts & Culture</p>
+              <p>
+                Act, direct, or work backstage! Bring stories to life on stage.
+              </p>
+              <a href="#" class="btn btn-secondary">View Profile</a>
+            </div>
+          </div>
+
+          <div
+            class="club-card"
+            data-category="Community"
+            data-name="Green Campus Initiative"
+          >
+            <img src="club-green.jpg" alt="Green Campus Initiative" />
+            <div class="card-content">
+              <h3>Green Campus Initiative</h3>
+              <p class="category">Community Service</p>
+              <p>
+                Promoting sustainability and eco-friendly practices on campus.
+              </p>
+              <a href="#" class="btn btn-secondary">View Profile</a>
+            </div>
+          </div>
+        </div>
+        <p
+          id="noClubsMessage"
+          style="
+            display: none;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #555;
+          "
+        >
+          No c
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

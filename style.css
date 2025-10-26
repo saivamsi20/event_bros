@@ -1,0 +1,306 @@
+/* Basic Resets & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif; /* Using a Google Font */
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f7f6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2c3e50; /* Dark blue */
+  color: #ecf0f1; /* Light gray */
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar .logo img {
+  height: 40px; /* Adjust logo size */
+  margin-right: 10px;
+  filter: invert(1); /* Makes a dark logo white for dark background */
+}
+
+.navbar nav ul {
+  display: flex;
+}
+
+.navbar nav ul li {
+  margin-left: 20px;
+}
+
+.navbar nav ul li a {
+  color: #ecf0f1;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar .btn-login {
+  background-color: transparent;
+  border: 1px solid #3498db; /* Blue for login */
+  color: #3498db;
+}
+
+.navbar .btn-login:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.navbar .btn-signup {
+  background-color: #2ecc71; /* Green for signup */
+  color: #fff;
+}
+
+.navbar .btn-signup:hover {
+  background-color: #27ae60;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url("university-students-hero.jpg"); /* Your hero image */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  min-height: 600px; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-section::before {
+  /* Overlay for better text readability */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.hero-buttons .btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* In style.css, within the .hero-section rule: */
+.hero-section {
+  background-image: url("university-students-hero.jpg"); /* This is the line */
+  background-size: cover;
+  background-position: center;
+  /* ... other styles for hero section ... */
+}
+
+.hero-buttons .btn-primary {
+  background-color: #3498db; /* Blue */
+  color: #fff;
+  border: 2px solid #3498db;
+}
+
+.hero-buttons .btn-primary:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+}
+
+.hero-buttons .btn-secondary {
+  background-color: #2ecc71; /* Green */
+  color: #fff;
+  border: 2px solid #2ecc71;
+}
+
+.hero-buttons .btn-secondary:hover {
+  background-color: #27ae60;
+  transform: translateY(-3px);
+}
+
+/* Features Section */
+.features-section {
+  background-color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.features-section .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.feature-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: #fcfcfc;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card img {
+  height: 60px; /* Adjust icon size */
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.feature-card p {
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 30px 0;
+  text-align: center;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: #ecf0f1;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #3498db; /* Blue hover */
+}
+
+.social-icons img {
+  height: 24px;
+  width: 24px;
+  margin: 0 8px;
+  filter: invert(1); /* Makes dark social icons white */
+  transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Design (Basic) */
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar nav ul {
+    margin-top: 15px;
+    justify-content: center;
+  }
+  .navbar nav ul li {
+    margin: 0 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .hero-buttons .btn {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+  }
+
+  .features-section .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature-card {
+    width: 90%;
+    max-width: 400px;
+  }
+}
